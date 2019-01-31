@@ -58,12 +58,12 @@ class CardController extends Controller
 
      {  
         $cards= Card::find($id);
-        $cards->list_id = $request->input('list_id');
-        $cards->name = $request->input('name');
-        $cards->description = $request->input('description'); 
-        $cards->order=$request->input('order');
-        $cards->members=$request->input('members');
-        $cards->archieved=$request->input('archieved');       
+       // $cards->list_id = $request->input('list_id');
+        $cards->card_name = $request->input('card_name');
+        $cards->card_description = $request->input('card_description'); 
+        $cards->card_order=$request->input('card_order');
+        $cards->card_members=$request->input('card_members');
+        $cards->card_archieved=$request->input('card_archieved');       
         $cards->save();
         return response()->json($cards, 201);
      }
